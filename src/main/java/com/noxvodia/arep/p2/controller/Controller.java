@@ -64,4 +64,5 @@ public class Controller {
         return "{ \"operation\": \"Binaria\"," + "\"input \":" + list + "," + "\"output:\"" + output + "}";
     }
 
+
 }
