@@ -40,7 +40,7 @@ public class Controller {
         return "{ \"operation\": \"Lineal\"," + "\"input \":" + list + "," + "\"output:\"" + output + "}";
     }
 
-    @GetMapping("binaria")
+    @GetMapping("/binaria")
     public String getBinary(@RequestParam int[] list, @RequestParam int value) {
 
         int indexResp = Binaria.binary(list, value);
