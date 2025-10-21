@@ -1,4 +1,23 @@
 video:
 
-https://pruebacorreoescuelaingeduco-my.sharepoint.com/:v:/g/personal/cesar_amaya-g_mail_escuelaing_edu_co/EZFY4kxrRXRGsG2uPZ-ujOMBAbI3iMp7aSHBB-z1dkx5Bw?e=0Py2Fn
+https://pruebacorreoescuelaingeduco-my.sharepoint.com/:v:/g/personal/cesar_amaya-g_mail_escuelaing_edu_co/ETBGKywogPRClMCIevyCwM4BZLREDLRFtSeRmZJnFQ5Xcw?e=3jocFN
 
+se crean as 3 instancias con el mismo grupo de seguridad y se abren los puertos necesarios
+![](image-1.png)
+
+![](image-2.png)
+
+se hace la conexion con la instancia EC2 y se descarga el proyecto en cada una de las instancias:
+
+![alt text](image-3.png)
+
+correr cada Ec2 en los diferentes puertos:
+8080, 8081, 8081
+
+los endpoints habilitados son:
+
+- /
+- /lineal
+- /binaria
+- /proxy/lineal
+- /proxy/binaria
