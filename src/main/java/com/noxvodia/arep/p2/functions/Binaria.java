@@ -5,26 +5,21 @@ import java.util.List;
 public class Binaria {
 
 
-    public static int binary(List<int[]> coordenadas, int[] tupla) {
+    public static int binary(int[] coordenadas, int tupla) {
         int izquierda = 0;
-        int derecha = coordenadas.size() - 1;
+        int derecha = coordenadas.length - 1;
 
         while (izquierda <= derecha) {
             int medio = izquierda + (derecha - izquierda) / 2;
-            int[] actual = coordenadas.get(medio);
+            int actual = coordenadas[medio];
+            
 
-            if (actual[0] < tupla[0]) {
+            if (actual < tupla) {
                 izquierda = medio + 1;
-            } else if (actual[0] > tupla[0]) {
+            } else if (actual > tupla) {
                 derecha = medio - 1;
             } else {
-                if (actual[1] == tupla[1]) {
-                    return medio; 
-                } else if (actual[1] < tupla[1]) {
-                    izquierda = medio + 1;
-                } else {
-                    derecha = medio - 1;
-                }
+                return medio;
             }
         }
         return -1;
