@@ -42,15 +42,16 @@
     <form action="/hello">
         <label for="binaryName">Binaria:</label><br>
         <input type="text" id="binaryName" name="name"><br><br>
+        <input type="text" id="searchb" name="name"><br><br>
         <p>nota: separe los numeros con coma y no deje espacios"</p>
-        <input type="button" value="Submit" onclick="loadGetMsg()">
+        <input type="button" value="Submit" onclick="loadGetMsg1()">
     </form>
     <div id="binaryRespMsg"></div>
     <script>
-        function loadGetMsg() {
+        function loadGetMsg1() {
             console.log("si entra")
-            let nameVar = document.getElementById("name").value;
-            let search = document.getElementById("search").value;
+            let nameVar = document.getElementById("binaryname").value;
+            let search = document.getElementById("searchb").value;
             console.log(nameVar)
             console.log(search)
 
