@@ -39,25 +39,25 @@
 
 
     <h1>Busqueda binaria</h1>
-    <form action="/hello">
+    <form action="/binaria">
         <label for="binaryName">Binaria:</label><br>
         <input type="text" id="binaryName" name="name"><br><br>
         <input type="text" id="searchb" name="name"><br><br>
         <p>nota: separe los numeros con coma y no deje espacios"</p>
-        <input type="button" value="Submit" onclick="loadGetMsg1()">
+        <input type="button" value="Submit" onclick="loadPostMsg()">
     </form>
     <div id="binaryRespMsg"></div>
     <script>
-        function loadGetMsg1() {
+        function loadPostMsg() {
             console.log("si entra")
-            let nameVar = document.getElementById("binaryname").value;
+            let nameVar = document.getElementById("binaryName").value;
             let search = document.getElementById("searchb").value;
             console.log(nameVar)
             console.log(search)
 
             const xhttp = new XMLHttpRequest();
             xhttp.onload = function () {
-                document.getElementById("getrespmsg").innerHTML =
+                document.getElementById("binaryRespMsg").innerHTML =
                     this.responseText;
             }
             xhttp.open("GET", `/binaria?list=${nameVar}&value=${search}`);
